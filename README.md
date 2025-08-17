@@ -128,6 +128,7 @@ If you want to test that `new_project.sh` works end-to-end:
 
 ```bash
 cd templates
+chmod +x new_project.sh # give the right permissions
 ./new_project.sh    # create dummy project
 cd ../dummy_project
 ./setup.sh

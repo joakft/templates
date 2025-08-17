@@ -60,7 +60,7 @@ if [[ "$INIT_GIT" =~ ^[Yy]$ ]]; then
     echo ""
     echo "2. Then run:"
     echo ""
-    echo "   git remote add origin git@github.com:$GITHUB_USER/$PROJECT_NAME.git"
+    echo "   git remote add origin https://github.com/$GITHUB_USER/$PROJECT_NAME.git"
     echo "   git branch -M main"
     echo "   git push -u origin main"
     echo ""
