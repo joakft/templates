@@ -1,0 +1,36 @@
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.so
+*.egg-info/
+
+# Virtual environments (though uv usually avoids .venv, safe to ignore)
+.venv/
+.env
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Testing cache
+.pytest_cache/
+.mypy_cache/
+coverage/
+
+# Build artifacts
+dist/
+build/
+*.egg
+
+# uv lockfiles generated in this repo root (templates use their own)
+uv.lock
+
+# Docker leftovers
+*.pid
+*.tar
