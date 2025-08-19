@@ -31,8 +31,10 @@ fi
 echo ">>> Creating project '$PROJECT_NAME' from '$TEMPLATE_NAME'..."
 cp -r "$SOURCE_DIR" "$TARGET_DIR"
 
-# Clean up
-rm -rf "$TARGET_DIR/.git"
+# Clean up unwanted files
+rm -rf "$TARGET_DIR/.git"              # remove any git history
+rm -f "$TARGET_DIR/uv.lock"            # ensure no stale uv.lock from template
+
 
 # Replace project name in pyproject.toml
 if grep -q "name = " "$TARGET_DIR/pyproject.toml"; then
