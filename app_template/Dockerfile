@@ -1,5 +1,3 @@
-# Simple Dockerfile for the app
-
 FROM python:3.11-slim
 
 WORKDIR /app
@@ -12,4 +10,4 @@ RUN uv sync --frozen
 COPY app ./app
 COPY .env.example .env.example
 
-CMD ["uv", "run", "python", "app/main.py"]
+CMD ["uv", "run", "python", "-m", "app.main"]
