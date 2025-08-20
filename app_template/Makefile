@@ -6,19 +6,14 @@ setup:
 	uv export --format requirements-txt > requirements.txt
 
 run:
-	@if [ -f ".env" ]; then \
-		set -o allexport; \
-		source .env; \
-		set +o allexport; \
-	fi; \
-	uv run python -m app.main
+	uv run --env-file .env python -m app.main
 
 docker:
 	docker build -t app_template .
-	docker run --env-file .env app_template uv run python -m app.main
+	docker run --rm -p 7860:7860 --env-file .env app_template
 
 test:
-	uv run pytest tests
+	uv run --env-file .env pytest tests
 
 export:
 	uv export --format requirements-txt > requirements.txt
