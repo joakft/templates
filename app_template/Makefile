@@ -1,9 +1,7 @@
 .PHONY: setup run docker test clean export
 
 setup:
-	uv sync
-	@if [ ! -f ".env" ]; then cp .env.example .env; fi
-	uv export --format requirements-txt > requirements.txt
+	bash ./setup.sh
 
 run:
 	uv run --env-file .env python -m app.main
