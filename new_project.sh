@@ -60,7 +60,7 @@ if [[ "$INIT_GIT" =~ ^[Yy]$ ]]; then
     echo "   - Repository name: $PROJECT_NAME"
     echo "   - Keep it empty (✅ no README, .gitignore, or license)"
     echo ""
-    echo "2. Then run:"
+    echo "2. Go to the project folder, then run:"
     echo ""
     echo "   git remote add origin https://github.com/$GITHUB_USER/$PROJECT_NAME.git"
     echo "   git branch -M main"
