@@ -20,6 +20,7 @@ It is a reproducible, container-ready, developer-friendly Python app skeleton us
 ### 1. Install dependencies and prepare environment
 
 ```bash
+chmod +x setup.sh run.sh docker-run.sh
 ./setup.sh
 ```
 
