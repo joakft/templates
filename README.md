@@ -51,6 +51,7 @@ The new project will be created **outside this folder**, in a sibling directory:
 
 ```bash
 cd ../your_new_project
+chmod +x setup.sh run.sh docker-run.sh # permissions
 ./setup.sh          # installs deps, creates .env
 make run            # or ./run.sh
 ```
